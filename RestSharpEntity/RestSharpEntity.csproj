@@ -51,6 +51,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,12 +65,51 @@
     <Compile Include="EntityWrite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestSharpScraper.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestSharpScraper.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestSharpScraper.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestSharpScraper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestSharpScraper.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestSharpScraper.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RestSharpStock.cs">
+      <DependentUpon>RestSharpScraper.tt</DependentUpon>
+    </Compile>
     <Compile Include="RSYahooAPI.cs" />
-    <Compile Include="SQLWrite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="RestSharpScraper.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RestSharpScraper.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RestSharpScraper.edmx.diagram">
+      <DependentUpon>RestSharpScraper.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RestSharpScraper.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RestSharpScraper.edmx</DependentUpon>
+      <LastGenOutput>RestSharpScraper.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="RestSharpScraper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RestSharpScraper.edmx</DependentUpon>
+      <LastGenOutput>RestSharpScraper.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
