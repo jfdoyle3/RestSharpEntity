@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d4f0b38e7abc48aba865d72283c090ae" Name="Diagram1">
-        <EntityTypeShape EntityType="RestSharpModel.RestSharpStock" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="9ffa979c8b29437ab174b0a73f21f4e8" Name="Diagram1">
+        <EntityTypeShape EntityType="RestSharpScraper.RestSharpStock" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

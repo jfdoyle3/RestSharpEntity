@@ -13,10 +13,10 @@ namespace RestSharpEntity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RestSharpStockContext : DbContext
+    public partial class RestSharpStocksContext : DbContext
     {
-        public RestSharpStockContext()
-            : base("name=RestSharpStockContext")
+        public RestSharpStocksContext()
+            : base("name=RestSharpStocksContext")
         {
         }
     

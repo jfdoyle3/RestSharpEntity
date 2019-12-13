@@ -15,8 +15,9 @@ namespace RestSharpEntity
         static void Main(string[] args)
         {
            JArray restSharpScrape = RSYahooAPI.YahooApiScrape();
+           Console.WriteLine("\nPress a key to write to database\n");
            Console.ReadKey();
-            SQLWrite.WriteDB(restSharpScrape);
+           EntityWrite.WriteDB(restSharpScrape);
 
         }
     }

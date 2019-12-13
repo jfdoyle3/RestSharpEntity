@@ -11,7 +11,7 @@ namespace RestSharpEntity
             string type = "RS";
 
             Console.Write("Open\n");
-            using (RestSharpStockContext db = new RestSharpStockContext())
+            using (RestSharpStocksContext db = new RestSharpStocksContext())
             {
                 foreach (JToken stock in rsStocks)
                 {

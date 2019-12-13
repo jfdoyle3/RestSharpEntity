@@ -14,7 +14,7 @@ namespace RestSharpEntity
     
     public partial class RestSharpStock
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public Nullable<System.DateTime> DateStamp { get; set; }
         public string Symbol { get; set; }
         public string Change { get; set; }
